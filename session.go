@@ -77,7 +77,6 @@ func (s *Session) query(q *Query) error {
 	}
 
 	// s.tx.Query(exp, args...)
-	println(exp)
 	return nil
 }
 
