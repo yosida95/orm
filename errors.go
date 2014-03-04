@@ -5,7 +5,8 @@ import (
 )
 
 var (
-	ErrUnsuitableRecord = errors.New("unsuitable record")
-	ErrUnsuitableModel  = errors.New("unsuitable model")
-	ErrDestIsNotSlice   = errors.New("destination is not a slice")
+	ErrUnsuitableModel        = errors.New("unsuitable model")
+	ErrDestIsNotSlice         = errors.New("destination is not a slice")
+	ErrTransactionHasClosed   = errors.New("transaction has closed")
+	ErrInvalidQuery           = errors.New("invalid query")
 )
