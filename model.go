@@ -20,7 +20,6 @@ func (r *record) initialized() bool {
 }
 
 type Model interface {
-	Save() error
 }
 
 type Record struct {
@@ -34,21 +33,4 @@ func (r *Record) initialized() bool {
 	}
 
 	return true
-}
-
-func (r *Record) Save() (err error) {
-	if r.record == nil {
-		/*
-			r.record = &record{
-				client: client,
-			}
-		*/
-	} else {
-		if r.record.client == nil {
-			err = ErrUnsuitableRecord
-			return
-		}
-	}
-
-	return
 }
